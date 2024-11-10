@@ -1,5 +1,6 @@
 body {
     background-color: #8899aa;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body > div{
     width: 60%;
@@ -7,14 +8,45 @@ body > div{
     margin-right: auto;
 }
 header{
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 footer{
-    padding-top: 50px;
+    margin-top: 50px;
 }
-body div img{
+footer *{
+    display: inline-block;
+}
+footer > div:last-child{
+    float: right;
+}
+#logo{
     width: 100%;
 }
-footer > div{
+nav > *{
+    display: inline-block;
+}
+nav > a:last-of-type{
     float: right;
+}
+nav, footer{
+    color: #dddddd;
+    background-color: #222222;
+    border-radius: 5px; 
+}
+nav a, footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav > *, footer div:first-child, footer > div > a{
+    padding: 10px;
+}
+a:hover{
+    background-color: #dddddd;
+}
+nav > a:hover:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+a:hover:last-child{
+    border-radius: 0px 5px 5px 0px;
 }
