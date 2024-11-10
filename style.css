@@ -2,7 +2,7 @@ body {
     background-color: #8899aa;
     font-family: Arial, Helvetica, sans-serif;
 }
-body > div{
+body{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -49,4 +49,23 @@ nav > a:hover:first-child{
 }
 a:hover:last-child{
     border-radius: 0px 5px 5px 0px;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#container > div{
+}
+.dish{
+    background-color: #eeeeee;
+    border-radius: 10px;
+    width: 300px;
+    min-height: 360px;
+    margin: 10px;
+    padding: 10px;
+}
+.dish > img{
+    width: 280px;
 }
