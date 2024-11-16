@@ -65,7 +65,32 @@ a:hover:last-child{
     min-height: 360px;
     margin: 10px;
     padding: 10px;
+    text-align: center;
 }
-.dish > img{
+.image-container > img{
     width: 280px;
+}
+.dish > *{
+}
+.dish > a{
+    background-color: #00aaff;
+    border-radius: 5px;
+    color:#eeeeee;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+.info{
+    width: 450px;
+    display: none;
+    position: absolute;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+.image-container:hover > .info{
+    display: block;
+}
+.info > img{
+    width: 450px;
+    border-radius: 10px 10px 0px 0px;
 }
