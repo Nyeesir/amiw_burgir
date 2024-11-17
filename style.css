@@ -2,7 +2,7 @@ body {
     background-color: #8899aa;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+#content{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -20,12 +20,13 @@ footer > div:last-child{
     float: right;
 }
 #logo{
-    width: 100%;
+    width: 70%;
+    margin-left: 15%;
 }
 nav > *{
     display: inline-block;
 }
-nav > a:last-of-type{
+nav > a:last-child{
     float: right;
 }
 nav, footer{
@@ -38,7 +39,7 @@ nav a, footer a{
     font-weight: bold;
     text-decoration: none;
 }
-nav > *, footer div:first-child, footer > div > a{
+nav a, footer div:first-child, footer > div > a{
     padding: 10px;
 }
 a:hover{
@@ -55,8 +56,6 @@ a:hover:last-child{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-#container > div{
 }
 .dish{
     background-color: #eeeeee;
@@ -86,6 +85,7 @@ a:hover:last-child{
     position: absolute;
     background-color: #cccccc;
     border-radius: 10px;
+    translate: -17% -65%;
 }
 .image-container:hover > .info{
     display: block;
@@ -93,4 +93,34 @@ a:hover:last-child{
 .info > img{
     width: 450px;
     border-radius: 10px 10px 0px 0px;
+}
+nav > div > a{
+    display: inline-block;
+}
+nav .dropdown-content{
+    background-color: #222222;
+    color: #dddddd;
+    position: absolute;
+    display: none;
+}
+.dropdown-container:hover > .dropdown-content{
+    display: block;
+}
+nav .dropdown-content a:last-child, nav .dropdown-content{
+    border-radius: 0px 0px 5px 5px;
+}
+.dropdown-content > a{
+    display: block;
+    text-align: center;
+}
+@media (max-width: 750px){
+   #content{
+       width: 100%;
+   } 
+    #container{
+    }
+    .dish{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
