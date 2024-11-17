@@ -118,9 +118,8 @@ nav .dropdown-content a:last-child, nav .dropdown-content{
        width: 100%;
    } 
     #container{
+        flex-direction: column;
     }
     .dish{
-        margin-left: 100px;
-        margin-right: 100px;
     }
 }
