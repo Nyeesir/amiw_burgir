@@ -1,95 +1,167 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>Gospoda online</title>
-<link rel="stylesheet" href="style1.css">
-<script src="script.js"></script>
-</head>
-<body>
+body {
+    background-color: #8899aa;
+    font-family: Helvetica;
+}
 
-<div id="content">
+header{
+    margin: 0px 0px 50px 0px;
+}
 
-<header>
-<img id="logo" src="logo.png" />
-<nav>
-<a href="#">Home</a>
-<a href="#">Promocje</a>
-<div class="dropdown">
-<a href="#">Menu</a>
-<div class="dropdown-content">
-<a href="#">Zupy</a>
-<a href="#">Dania Główne</a>
-<a href="#">Desery</a>
-<a href="#">Napoje</a>
-</div>
-</div>
-<a href="#">Logowanie</a>
-<a href="#">Koszyk (0)</a>
-</nav>
-</header>
+header nav{
+    background-color:#222222;
+    border-radius: 5px;
+}
 
-<div id="container">
+header nav a{
+    display: inline-block;
+    color: #dddddd;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
 
-<div class="dish">
-<h2>Kotlet schabowy</h2>
-<div class="image-container">
-<img src="1.jpg" />
-<div class="info">
-<img src="1.jpg" />
-Kotlet schabowy z ziemniaczanymi łódeczkami.
-</div>
-</div>
-<p>Cena: 24zł</p>
-<a href="#" >Zamów</a>
-</div>
+header nav a:last-child{
+    float: right;
+}
 
-<div class="dish">
-<h2>Pierogi z mięsem</h2>
-<div class="image-container">
-<img src="2.jpg" />
-<div class="info">
-<img src="2.jpg" />
-Pierogi z mięsem okraszone wędzoną słoniną i smażoną cebulką.
-</div>
-</div>
-<p>Cena: 20zł</p>
-<a href="#" >Zamów</a>
-</div>
+#content {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
 
-<div class="dish">
-<h2>Rosół</h2>
-<div class="image-container">
-<img src="3.jpg" />
-<div class="info">
-<img src="3.jpg" />
-Rosół z kury z domowym makaronem.
-</div>
-</div>
-<p>Cena: 12zł</p>
-<a href="#" >Zamów</a>
-</div>
+#logo {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
 
-<div class="dish">
-<h2>Zupa pomidorowa</h2>
-<div class="image-container">
-<img src="4.jpg" />
-<div class="info">
-<img src="4.jpg" />
-Zupa pomidorowa krem z makaronem świderki.
-</div>
-</div>
-<p>Cena: 10zł</p>
-<a href="#" >Zamów</a>
-</div>
+footer{
+    margin: 50px 0px 0px 0px;
+    background-color:#222222;
+    border-radius: 5px;
+    color: #dddddd;
+}
 
-</div>
+footer div{
+    display: inline-block;
+}
 
-<footer>
-<div>Copyright 2023 | Autor aaa bbb</div><div><a href="#">Kontakt</a> | <a href="#">O nas</a></div>
-</footer>
+footer div:first-child{
+    padding: 10px;
+}
 
-</div>
+footer div:last-child{
+    float: right;
+}
 
-</body>
-</html>
+footer div a{
+    display: inline-block;
+    font-weight: bold;
+    color: #dddddd;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover{
+    background-color:#aaaaaa;
+}
+
+a:last-child{
+    border-radius: 0px 5px 5px 0px;
+}
+
+nav > a:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.dropdown-content{
+    display: none;
+    background-color: #222222;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+}
+
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a{
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:last-child{
+    float: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dish{
+    background-color: #eeeeee;
+    border-radius: 10px;
+    min-height: 360px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.dish h2{
+    text-align: center;
+}
+
+.dish img{
+    width: 280px;
+    margin: auto;
+}
+
+.dish a{
+    background-color: #00aaff;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    text-weight: bold;
+}
+
+.info{
+    display: none;
+    width: 450px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-17%, -65%);
+}
+/*
+.image-container:hover .info{
+    display: block;
+}
+*/
+.info img{
+    display: block;
+    width: 450px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+@media screen and (max-width: 750px) {
+
+    #content{
+        width: 100%;
+    }
+
+    #container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
