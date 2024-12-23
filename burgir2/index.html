@@ -37,7 +37,26 @@
 						<a href="#">Napoje</a>
 					</div>
 				</div>
-				<a href="#">Logowanie</a>
+				<div class="dropdown">
+					<a href="#" id="">Logowanie</a>
+					<div class="dropdown-content" id="formularz-logowania">
+						<form autocomplete="off">
+							<label for="email">
+								E-mail:
+								<input type="email" name="email" id="email" oninput="checkEmail(this)" autocomplete="off" />
+							</label>
+							<label for="pass1">
+								Hasło:
+								<input type="password" name="pass1" id="pass1" oninput="checkPassword(this)" autocomplete="off" />
+							</label>
+							<label for="pass2">
+								Powtórz hasło:
+								<input type="password" name="pass2" id="pass2" oninput="checkIfSamePasswords(this)" autocomplete="off" />
+							</label>
+							<a href="#" onclick="register()">Zarejestruj</a>
+						</form>
+					</div>
+				</div>
 				<a href="#" id="koszyk">Koszyk (0)</a>
 			</nav>
 		</header>
@@ -99,7 +118,9 @@
 		</div>
 
 		<footer>
-			<div>Copyright 2023 | Autor aaa bbb</div><div><a href="#">Kontakt</a> | <a href="#">O nas</a></div>
+			<div>Copyright 2023 | Autor aaa bbb</div>
+			<div id="czas">00:00</div>
+			<div><a href="#">Kontakt</a> | <a href="#">O nas</a></div>
 		</footer>
 
 		</div>

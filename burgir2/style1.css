@@ -165,3 +165,21 @@ nav > a:first-child{
     }
 
 }
+
+#formularz-logowania{
+    padding: 5px;
+}
+
+#formularz-logowania label{
+    display: block;
+    color: #dddddd;
+    text-align: center;
+}
+
+#formularz-logowania input{
+    display: block;
+}
+
+#logo{
+    height: 300px;
+}
