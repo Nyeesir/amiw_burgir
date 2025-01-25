@@ -5,15 +5,17 @@
 		<title>Gospoda online</title>
 		<link rel="stylesheet" href="style1.css">
 		<script src="script.js"></script>
+		<!-- import jquery z cdna -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script>
 			$( document ).ready(function() {
+				//instrukcja sprawiająca, że po kliknięciu w obrazek przy pozycji w menu
+				//zacznie powoli pojawiać się jego powiększona wersja z opisem potrawy 
 				$(".dish .image-container img").click(function (){
-					//$(this).siblings("div").css("display","block");
 					$(this).siblings("div").fadeIn("2200");
 				})
+				//funkcja sprawiająca, że po kliknięciu w powiększony obrazek zacznie on powoli zanikać
 				$(".dish .image-container .info img").click(function (){
-					//$(this).parent().css("display","none");
 					$(this).parent().fadeOut("2200");
 				})
 			});
@@ -24,11 +26,17 @@
 		<div id="content">
 
 		<header>
+			<!-- Blok zawierający logo oraz menu nawigacji strony -->
 			<img id="logo" src="logo.png" />
 			<nav>
 				<a href="#">Home</a>
 				<a href="#">Promocje</a>
 				<div class="dropdown">
+					<!-- 
+					Blok typu dropdown 
+					zawartość bloku dropdown-content jest ukryta i zostaje pokazana
+					po najechaniu na tekst:"Menu"
+				 	-->
 					<a href="#">Menu</a>
 					<div class="dropdown-content">
 						<a href="#">Zupy</a>
@@ -38,9 +46,21 @@
 					</div>
 				</div>
 				<div class="dropdown">
+					<!-- 
+					Blok typu dropdown 
+					zawartość bloku dropdown-content jest ukryta i zostaje pokazana
+					po najechaniu na tekst:"Logowanie"
+					 -->
 					<a href="#" id="">Logowanie</a>
 					<div class="dropdown-content" id="formularz-logowania">
 						<form autocomplete="off">
+							<!-- 
+							formularz logowania do strony 
+							funkcje checkEmail, checkPassword, checkIfSamePasswords zostają wywołane
+							przy każdym wpisaniu znaku w poszczególne pole.
+							Do każdej z tej funkcji przekazywany jest 'this', który jest elementem
+							typu 'input', który wywołuje tą funkcję
+							-->
 							<label for="email">
 								E-mail:
 								<input type="email" name="email" id="email" oninput="checkEmail(this)" autocomplete="off" />
@@ -54,6 +74,7 @@
 								<input type="password" name="pass2" id="pass2" oninput="checkIfSamePasswords(this)" autocomplete="off" />
 							</label>
 							<a href="#" onclick="register()">Zarejestruj</a>
+							<!-- Tag 'a' po naciśnięciu wywołuje funkcję odpowiedzialną za czyszczenie formularza -->
 						</form>
 					</div>
 				</div>
@@ -62,6 +83,7 @@
 		</header>
 
 		<div id="container">
+			<!-- Blok zawierający wszystkie pozycje w menu -->
 
 			<div class="dish">
 				<h2>Kotlet schabowy</h2>
@@ -118,7 +140,8 @@
 		</div>
 
 		<footer>
-			<div>Copyright 2023 | Autor aaa bbb</div>
+			<!-- Stopka strony -->
+			<div>Copyright 2023 | Autor - Burza Mózgów - Dawid Brożek, Dominik Kania, Kamil Prusek</div>
 			<div id="czas">00:00</div>
 			<div><a href="#">Kontakt</a> | <a href="#">O nas</a></div>
 		</footer>
